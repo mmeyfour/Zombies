@@ -66,7 +66,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         newGame()
     }
-
+    
     // MARK: state management
     func updateGameState() {
         if game.hasLost {
@@ -140,7 +140,7 @@ class ViewController: UIViewController {
             leftButton.alpha = 0.1
         }
     }
-
+    
     func updateSquare(_ x: Int, _ y: Int, _ content: String) {
         // +++FIXME: this formula to translate (x, y) coordinates to tag id is buggy,
         // can you fix it? And what does that strange code with filter do?
@@ -182,6 +182,6 @@ class ViewController: UIViewController {
             finalMesageLabel.text =  "You lost! ☠️"
         }
     }
-
+    
 }
 

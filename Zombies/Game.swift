@@ -51,7 +51,7 @@ struct Game {
             if !((x == 0 || x == 1) &&
                 (y == 0 || y == 1)) &&
                 !((x == 3 || x == 4) &&
-                (y == 3 || y == 4)) {
+                    (y == 3 || y == 4)) {
                 
                 if grid[x][y] != "🧟" {
                     updateSquare(x, y, "🧟")
@@ -150,7 +150,7 @@ struct Game {
     var hasLost: Bool {
         // +++TODO: calculate when player has lost (when revealing a zombie)
         var youLose = false
-
+        
         for (_, aux) in visibleGrid.enumerated() {
             for (_, square) in aux.enumerated() {
                 if square == "🧟" {
@@ -158,7 +158,7 @@ struct Game {
                 }
             }
         }
-
+        
         return youLose
     }
     
